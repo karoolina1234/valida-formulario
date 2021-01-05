@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="progresso" style="text-align: center;">
+    <ul class="nav" style="justify-content: center;">
+        <li class="nav-item aba-dadosPessoais">
+          <a class="nav-link " href="#">Dados pessoais</a>
+        </li>
+        <li class="nav-item aba-endereco">
+          <a class="nav-link" href="#">Endereço</a>
+        </li>
+        <li class="nav-item aba-complemento">
+          <a class="nav-link" href="#">Complemento</a>
+        </li>
+        
+      </ul>
+</div>
+<form id="formularioDadosPessoais"  method="POST">
+    <div class="container dados-pessoais">
+        <h2 class="title">Cadastro de dados pessoais!</h2>
+        <p class="campos-obrigatorios">Campos com (*) são obrigatórios!</p>
+        
+            <div class="form-group">
+              <label for="name">Nome Completo*</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nome completo" >
+            </div>
+            <div class="form-group col-md-6">
+              <label for="cpf">Cpf*</label>
+              <input type="text" class="form-control" id="campo_cpf" name='campo_cpf' >
+            </div>
+            <div class="form-group col-md-6">
+                <label for="date">Data de nascimento*</label>
+                <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" >
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="date">Celular*</label>
+                <input type="text" class="form-control" id="campo_celular" name="campo_celular" >
+            </div>
+            <div class="form-group col-md-6">
+                <label for="date">e-mail*</label>
+                <input type="email" class="form-control" id="campo_email" name="campo_email" >
+            </div>
+            <div  class="buttons">
+            <input type="submit" class="btn validar" name="validar" value="proxima etapa"></input>
+            <input type="submit" class="btn btn-primary dados-pessoais-btn" value="proxima etapa"></input>
+        </div>
+         
+    </div>
+
+
+
+    <div class="container endereco">
+        <h2 class="title">Cadastro de endereço!</h2>
+        <p class="campos-obrigatorios">Campos com (*) são obrigatórios!</p>
+       
+            <div class="form-group col-md-4">
+              <label for="name">Cep*</label>
+              <input type="text" class="form-control" id="cep" name="cep" placeholder="Cep">
+            </div>
+            
+            <div class="form-group col-md-8">
+                <label>Cidade</label>
+                <input class="form-control" id="cidade" name="cidade">
+                    
+                
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="uf">UF</label>
+              
+                  <input class="form-control" id="uf" name="uf">
+             
+            </div>
+            <div class="form-group col-md-6">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" name="bairro" id="bairro" placeholder="informe seu bairro">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="numero">Logradoro</label>
+                <input type="text" class="form-control" id="rua" name="rua" placeholder="informe seu endereço">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="numero">Numero*</label>
+                <input type="text" class="form-control" id="numero" name="numero" placeholder="informe seu numero">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="bairro">Complemento</label>
+                <input type="text" class="form-control" id="bairro">
+            </div>
+
+            <div class="buttons-endereco">
+               
+               
+                <button type="button" class="btn btn-primary endereco-btn">Proxima etapa</button>
+                <input type="submit" class="btn validar" name="validar" value="proxima etapa"></input>
+            </div>
+            
+          
+    </div>
+
+
+    <div class="container complemento">
+        <h2 class="title">Escreva sua descrição!</h2>
+        <p class="campos-obrigatorios">Campos com (*) são obrigatórios!</p>
+        
+            <div class="form-group">
+                <textarea class="form-control" id="bio" name="bio" rows="5" placeholder="Bio..*"></textarea>
+            </div>
+        
+
+            <div class="buttons-endereco">
+                
+                <input type="submit" class="btn validar vFinalizar" name="validar" value="Enviar dados"></input>
+            </div>
+            
+          
+    </div>
+
+    <div class="container dados-enviados">
+        <h2 class="sucessoTitle">Dados Prenchidos com sucesso</h2>
+       
+        
+            
+          
+    </div>
+</form>
+
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+<script src="index.js"></script>
+
+</html>
